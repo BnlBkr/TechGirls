@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<% @title= "Home" %>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "TechGirls", home_path %>
+          </h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "CV Writing", cvwriting_path %></li> <!--create a page path-->
+
+          <li class="divider"></li>
+          <li><%= link_to "Interviews", interviews_path %></li>
+          <li class="divider"></li>
+          <li><%=link_to "Work" ,work_path %></li>
+          <li class="divider"></li>
+        </ul>
+      </div>
+    </nav>
+
+
+<section>
+        <div class="row">
+            <div class= "small-4 columns">
+               <%= image_tag("cv.jpg", alt: "CV Writing Image") %>
+            </div>
+
+            <div class= "small-4 columns">
+              	<%= image_tag("interview.png", alt: "Interview Image") %>
+            </div>
+
+            <div class= "small-4 columns">
+                <%= image_tag("work.png", alt: "Work Image") %>
+            </div>
+        </div>
+    </section> 
+
+  
+      <div class="row">
+        <div class="small-12 columns">
+          <p>Whether you have just left university, looking for that summer job, or planning to move on to greener pastures; this is the site to bookmark. We have tips and tricks to tailor your CV to land that Interview. But wait, it doesnt stop there, we have advice to help you get over interview jitters, and prepare you to answer those dreaded interview questions. Our work section helps those that want to know how to handle job related issues, whether its conflict with a colleague, food missing out of the kitchen fridge or how to ask your boss for that raise you feel you deserve. This site is for everyone. Enjoy!
+          </p>
+        </div>
+      </div>
+    
+
+    <footer>
+      	<div class="row">
+        	<div class= "small-6 columns">
+         	<p>TrcyBnl TechGirls 2015 </p>
+        	</div>
+
+        	<div class="small-2 columns">
+          	<%= link_to " Disclaimer", disclaimer_path %>
+        	</div>
+
+        	<div class="small-2  columns">
+          	<%= link_to "Sitemap", sitemap_path%>
+        	</div>
+
+        	<div class="small-2 columns">
+          	<%= link_to 'Feedback', feedback_path, class: "button small" %>
+      		</div>
+
+      	</div>
+     </footer>
+
+</body>
+</html>

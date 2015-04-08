@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<% @title= "Interviews" %>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "TechGirls", home_path %>
+          </h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "CV Writing", cvwriting_path %>
+          </li>
+          <li class="divider"></li>
+          <li><%=link_to "Work" ,work_path %></li>
+          <li class="divider"></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="full-width content-area">
+      <div class="row">
+        <div class="large-12 columns">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, asperiores, voluptas, veniam commodi impedit tenetur dolores cumque facere explicabo esse quaerat veritatis laboriosam eius modi amet maxime non officia nemo? Iste, quisquam, voluptatum, dolor nam reiciendis unde aliquam numquam necessitatibus odio et perspiciatis facere nihil inventore ullam aspernatur corporis veritatis quia dolorum? Sed, hic, eos quis quibusdam eum aut optio repudiandae at! Eligendi, neque ratione alias enim quae magnam dolores esse pariatur earum laborum reiciendis nobis sunt sequi sapiente ducimus iure ipsam. Sapiente, minima, rerum, facere quos saepe pariatur magni dolorem cum amet nemo quis laborum ipsa dignissimos ducimus inventore modi rem cumque quibusdam quam asperiores! Optio, nobis suscipit molestias voluptas veritatis aspernatur accusamus excepturi rem quaerat impedit animi voluptate at facilis aliquid cum fugit labore omnis provident recusandae autem. Doloribus, mollitia quos officiis quas sapiente nam dolor praesentium maxime cupiditate illum? Rem, esse, nulla vitae adipisci sequi deleniti quasi!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+<!--CONTENT AREA -->
+    <footer >
+      <div class="row">
+        <div class= "small-6 columns">
+         <p>TrcyBnl TechGirls 2015 </p>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to " Disclaimer", disclaimer_path %>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to "Sitemap", sitemap_path %>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to 'Feedback', feedback_path, class: "button small" %>
+      </div>
+     </footer>
+
+</body>
+</html>
